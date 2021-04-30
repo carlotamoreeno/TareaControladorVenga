@@ -50,6 +50,7 @@ public class Controlador {
 		this.cerrarVentanas();
 
 		switch (ventana) {
+		
 			case "Logout":
 				misVentanas[6].setVisible(true);
 				break;
