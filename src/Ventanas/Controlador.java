@@ -51,6 +51,7 @@ public class Controlador {
 
 		switch (ventana) {
 			case "Logout":
+				
 				misVentanas[6].setVisible(true);
 				break;
 			case "Tutores":
