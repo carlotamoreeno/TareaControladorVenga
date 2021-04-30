@@ -34,6 +34,7 @@ public class Lanzadera extends JFrame {
 		misVentanas[6] = new Login();
 		misVentanas[7] = new Tutores();
 
+		
 		miC.setVentana0(misVentanas[0]);// Controlador vea las ventanas metodos seters
 		miC.setVentana1(misVentanas[1]);
 		miC.setVentana2(misVentanas[2]);
