@@ -47,7 +47,7 @@ public class Empresas extends JFrame implements Ventana {
 	private JLabel lblImgLogo, lblLogout, lblAlumnos, lblEmpresas, lblConsultas, lblAyuda,lblTitulo,lblTutores;
 	private JSeparator separator_0, separator_1, separator_2, separator_3,separator_4;
 	private JTable table;
-	private JButton btnModificar;
+	private JButton btnModificarEmpresas;
 	
 	public Empresas() {
 		setTitle("Empresas");
@@ -244,15 +244,15 @@ public class Empresas extends JFrame implements Ventana {
 		}
 		scrollPane.setViewportView(table);
 		
-		btnModificar = new JButton("Modificar");
-		btnModificar.setFont(new Font("Tahoma", Font.PLAIN, 17));
-		btnModificar.setBounds(771, 709, 128, 32);
-		contentPane.add(btnModificar);
+		btnModificarEmpresas = new JButton("Modificar");
+		btnModificarEmpresas.setFont(new Font("Tahoma", Font.PLAIN, 17));
+		btnModificarEmpresas.setBounds(771, 709, 128, 32);
+		contentPane.add(btnModificarEmpresas);
 
-		JButton btnAniadir = new JButton("A\u00F1adir");
-		btnAniadir.setFont(new Font("Tahoma", Font.PLAIN, 17));
-		btnAniadir.setBounds(923, 709, 107, 32);
-		contentPane.add(btnAniadir);
+		JButton btnAniadirEmpresas = new JButton("A\u00F1adir");
+		btnAniadirEmpresas.setFont(new Font("Tahoma", Font.PLAIN, 17));
+		btnAniadirEmpresas.setBounds(923, 709, 107, 32);
+		contentPane.add(btnAniadirEmpresas);
 
 		JButton btnBorrar = new JButton("Borrar");
 		btnBorrar.setFont(new Font("Tahoma", Font.PLAIN, 17));

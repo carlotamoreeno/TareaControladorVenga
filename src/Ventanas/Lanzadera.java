@@ -24,7 +24,7 @@ public class Lanzadera extends JFrame {
 	Controlador miC = new Controlador();
 
 	public Lanzadera() {
-		misVentanas = new Ventana[8];
+		misVentanas = new Ventana[9];
 		misVentanas[0] = new Alumnos();
 		misVentanas[1] = new Consultas();
 		misVentanas[2] = new Empresas();
@@ -33,6 +33,7 @@ public class Lanzadera extends JFrame {
 		misVentanas[5] = new FormularioTutores();
 		misVentanas[6] = new Login();
 		misVentanas[7] = new Tutores();
+		misVentanas[8] = new Ayuda();
 
 		
 		miC.setVentana0(misVentanas[0]);// Controlador vea las ventanas metodos seters
@@ -55,7 +56,7 @@ public class Lanzadera extends JFrame {
 		misVentanas[7].setControlador(miC);
 		misVentanas[8].setControlador(miC);
 
-		misVentanas[0].setVisible(true);
+		misVentanas[6].setVisible(true);
 
 	}
 }

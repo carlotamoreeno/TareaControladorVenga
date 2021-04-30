@@ -38,6 +38,8 @@ import Ventanas.Alumnos.HorizontalAlignmentHeaderRenderer;
 import java.awt.SystemColor;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Tutores extends JFrame implements Ventana {
 
@@ -47,7 +49,7 @@ public class Tutores extends JFrame implements Ventana {
 	private JLabel lblImgLogo, lblLogout, lblAlumnos, lblEmpresas, lblConsultas, lblAyuda, lblTitulo, lblTutores;
 	private JSeparator separator_0, separator_1, separator_2, separator_3, separator_4;
 	private JTable table;
-	private JButton btnModificar;
+	private JButton btnModificarTutores;
 
 	public Tutores() {
 		setTitle("Tutores");
@@ -245,15 +247,19 @@ public class Tutores extends JFrame implements Ventana {
 		}
 		scrollPane.setViewportView(table);
 
-		btnModificar = new JButton("Modificar");
-		btnModificar.setFont(new Font("Tahoma", Font.PLAIN, 17));
-		btnModificar.setBounds(729, 165, 128, 32);
-		contentPane.add(btnModificar);
+		btnModificarTutores = new JButton("Modificar");
+		btnModificarTutores.setFont(new Font("Tahoma", Font.PLAIN, 17));
+		btnModificarTutores.setBounds(729, 165, 128, 32);
+		contentPane.add(btnModificarTutores);
 
-		JButton btnAniadir = new JButton("A\u00F1adir");
-		btnAniadir.setFont(new Font("Tahoma", Font.PLAIN, 17));
-		btnAniadir.setBounds(880, 165, 107, 32);
-		contentPane.add(btnAniadir);
+		JButton btnAniadirTutores = new JButton("A\u00F1adir");
+		btnAniadirTutores.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
+		btnAniadirTutores.setFont(new Font("Tahoma", Font.PLAIN, 17));
+		btnAniadirTutores.setBounds(880, 165, 107, 32);
+		contentPane.add(btnAniadirTutores);
 
 		JButton btnBorrar = new JButton("Borrar");
 		btnBorrar.setFont(new Font("Tahoma", Font.PLAIN, 17));
