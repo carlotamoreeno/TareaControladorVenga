@@ -39,9 +39,46 @@ public class Controlador {
 		this.misVentanas[8] = ventana;
 	}
 
+	
 	public void cerrarVentanas() {
 		for (Ventana ventana : misVentanas) {
+			ventana.setVisible(false);
+		}
+	}
+	
+	public void irVentana(String ventana) {
+		this.cerrarVentanas();
+
+		switch (ventana) {
+			case "Logout":
+				misVentanas[6].setVisible(true);
+				break;
+			case "Tutores":
+				misVentanas[7].setVisible(true);
+				break;
+			case "btnAniadirTutores", "btnModificarTutores":
+				misVentanas[5].setVisible(true);
+				break;
+			case "Alumnos","Login":
+				misVentanas[0].setVisible(true);
+				break;
 			
+			case "btnAniadirAlumnos", "btnModificarAlumnos":
+				misVentanas[3].setVisible(true);
+				break;
+			case "Empresas":
+				misVentanas[2].setVisible(true);
+				break;
+			case "btnModificarEmpresas","btnAniadirEmpresas":
+				misVentanas[4].setVisible(true);
+				break;
+			case "Ayuda":
+				misVentanas[4].setVisible(true);
+				break;
+			case "Consultas":
+				misVentanas[1].setVisible(true);
+				break;
+
 		}
 	}
 }
