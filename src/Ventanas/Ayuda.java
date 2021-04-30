@@ -27,9 +27,10 @@ import javax.swing.JTabbedPane;
  * @author ana
  *
  */
-public class AyudaDirectora extends JFrame {
+public class Ayuda extends JFrame implements Ventana {
 	
-
+	private Controlador miC;
+	
 	private JPanel contentPane;
 	private JLabel lblImgLogo,lblTutores;
 	private JPanel panelMenu;
@@ -45,7 +46,7 @@ public class AyudaDirectora extends JFrame {
 	private JTabbedPane tabbedPane;
 
 
-	public AyudaDirectora() {
+	public Ayuda() {
 		setTitle("AyudaProfesores");
 		setBounds(100, 100, 1221, 800);
 		contentPane = new JPanel();
@@ -211,6 +212,13 @@ public class AyudaDirectora extends JFrame {
 		
 		AyudaFormularioAlumnos alu = new AyudaFormularioAlumnos();
 		tabbedPane.addTab("Formulario Alumnos",alu);
+		
+	}
+
+
+	@Override
+	public void setControlador(Controlador miC) {
+		this.miC = miC;
 		
 	}
 }
