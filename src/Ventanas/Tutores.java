@@ -249,7 +249,7 @@ public class Tutores extends JFrame implements Ventana {
 
 		btnModificarTutores = new JButton("Modificar");
 		btnModificarTutores.setFont(new Font("Tahoma", Font.PLAIN, 17));
-		btnModificarTutores.setBounds(729, 165, 128, 32);
+		btnModificarTutores.setBounds(759, 709, 128, 32);
 		contentPane.add(btnModificarTutores);
 
 		JButton btnAniadirTutores = new JButton("A\u00F1adir");
@@ -258,12 +258,12 @@ public class Tutores extends JFrame implements Ventana {
 			}
 		});
 		btnAniadirTutores.setFont(new Font("Tahoma", Font.PLAIN, 17));
-		btnAniadirTutores.setBounds(880, 165, 107, 32);
+		btnAniadirTutores.setBounds(915, 709, 107, 32);
 		contentPane.add(btnAniadirTutores);
 
 		JButton btnBorrar = new JButton("Borrar");
 		btnBorrar.setFont(new Font("Tahoma", Font.PLAIN, 17));
-		btnBorrar.setBounds(1008, 165, 90, 32);
+		btnBorrar.setBounds(1057, 709, 90, 32);
 		contentPane.add(btnBorrar);
 
 		lblTitulo = new JLabel("Tutores");
