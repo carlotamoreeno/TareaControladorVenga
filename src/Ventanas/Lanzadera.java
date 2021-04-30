@@ -22,6 +22,12 @@ public class Lanzadera extends JFrame {
 	private Ventana[] misVentanas;
 
 	Controlador miC = new Controlador();
+	
+	public static void main(String[] args) {
+
+		Lanzadera frame = new Lanzadera();
+
+	}
 
 	public Lanzadera() {
 		misVentanas = new Ventana[9];
@@ -56,7 +62,7 @@ public class Lanzadera extends JFrame {
 		misVentanas[7].setControlador(miC);
 		misVentanas[8].setControlador(miC);
 
-		misVentanas[6].setVisible(true);
+		misVentanas[8].setVisible(true);
 
 	}
 }

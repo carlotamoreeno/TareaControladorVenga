@@ -176,6 +176,16 @@ public class Ayuda extends JFrame implements Ventana {
 		panelMenu.add(lblLogout);
 
 		lblTutores = new JLabel("Tutores");
+		lblTutores.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				miC.irVentana(lblTutores.getText());
+			}
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				lblTutores.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+			}
+		});
 		lblTutores.setHorizontalAlignment(SwingConstants.CENTER);
 		lblTutores.setForeground(Color.WHITE);
 		lblTutores.setFont(new Font("Oriya Sangam MN", Font.PLAIN, 20));
