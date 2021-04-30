@@ -1,7 +1,8 @@
+
 package Ventanas;
 
 public class Controlador {
-	private Ventana[] misVentanas = new Ventana[9];;
+	private Ventana[] misVentanas = new Ventana[9];
 
 	public void setVentana0(Ventana ventana) {
 		this.misVentanas[0] = ventana;
