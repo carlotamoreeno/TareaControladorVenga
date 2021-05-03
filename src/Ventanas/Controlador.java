@@ -75,7 +75,7 @@ public class Controlador {
 				misVentanas[4].setVisible(true);
 				break;
 			case "Ayuda":
-				misVentanas[4].setVisible(true);
+				misVentanas[8].setVisible(true);
 				break;
 			case "Consultas":
 				misVentanas[1].setVisible(true);

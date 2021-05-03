@@ -20,6 +20,7 @@ import java.awt.Component;
 import java.awt.Cursor;
 import java.awt.Dimension;
 
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
 import javax.swing.SwingConstants;
 import javax.swing.JSeparator;
@@ -52,17 +53,10 @@ public class Consultas extends JFrame implements Ventana {
 	private JLabel lblTitulo;
 	private JCheckBox chckbxNewCheckBox;
 	private JTable table;
-	private JLabel lblAlumnosPorTutor;
-	private JButton btnInformeAseguradoras;
-	private JButton btnAlumPorTutor;
-	private JButton btnTutorPorCiclo;
-	private JButton btnAlumPorEmpresa;
-	private JButton btnInformeGeneralFCT;
-	private JButton btnAlumEnPracticas;
 
 	public Consultas() {
 		setTitle("Consultas");
-		setBounds(100, 100, 1226, 905);
+		setBounds(100, 100, 1221, 800);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(253, 253, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -97,6 +91,11 @@ public class Consultas extends JFrame implements Ventana {
 			public void mouseEntered(MouseEvent e) {
 				lblAlumnos.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 			}
+
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				miC.irVentana(lblAlumnos.getText());
+			}
 		});
 		lblAlumnos.setHorizontalAlignment(SwingConstants.CENTER);
 		lblAlumnos.setForeground(Color.WHITE);
@@ -117,6 +116,11 @@ public class Consultas extends JFrame implements Ventana {
 			@Override
 			public void mouseEntered(MouseEvent e) {
 				lblEmpresas.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+			}
+
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				miC.irVentana(lblEmpresas.getText());
 			}
 		});
 		lblEmpresas.setHorizontalAlignment(SwingConstants.CENTER);
@@ -139,6 +143,11 @@ public class Consultas extends JFrame implements Ventana {
 			public void mouseEntered(MouseEvent e) {
 				lblConsultas.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 			}
+
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				miC.irVentana(lblConsultas.getText());
+			}
 		});
 		lblConsultas.setHorizontalAlignment(SwingConstants.CENTER);
 		lblConsultas.setForeground(Color.WHITE);
@@ -159,6 +168,11 @@ public class Consultas extends JFrame implements Ventana {
 			@Override
 			public void mouseEntered(MouseEvent e) {
 				lblAyuda.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+			}
+
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				miC.irVentana(lblAyuda.getText());
 			}
 		});
 		lblAyuda.setHorizontalAlignment(SwingConstants.CENTER);
@@ -181,6 +195,11 @@ public class Consultas extends JFrame implements Ventana {
 			public void mouseEntered(MouseEvent e) {
 				lblLogout.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 			}
+
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				miC.irVentana(lblLogout.getText());
+			}
 		});
 		lblLogout.setFont(new Font("Oriya Sangam MN", Font.PLAIN, 20));
 		lblLogout.setHorizontalAlignment(SwingConstants.CENTER);
@@ -189,6 +208,17 @@ public class Consultas extends JFrame implements Ventana {
 		panelMenu.add(lblLogout);
 
 		lblTutores = new JLabel("Tutores");
+		lblTutores.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				miC.irVentana(lblTutores.getText());
+			}
+
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				lblTutores.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+			}
+		});
 		lblTutores.setHorizontalAlignment(SwingConstants.CENTER);
 		lblTutores.setForeground(Color.WHITE);
 		lblTutores.setFont(new Font("Oriya Sangam MN", Font.PLAIN, 20));
@@ -200,7 +230,7 @@ public class Consultas extends JFrame implements Ventana {
 		separator_4.setOrientation(SwingConstants.VERTICAL);
 		separator_4.setForeground(Color.BLACK);
 		separator_4.setBackground(Color.BLACK);
-		separator_4.setBounds(376, 6, 12, 47);
+		separator_4.setBounds(375, 7, 12, 47);
 		panelMenu.add(separator_4);
 
 		lblImgLogo = new JLabel("");
@@ -209,7 +239,7 @@ public class Consultas extends JFrame implements Ventana {
 		contentPane.add(lblImgLogo);
 
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(245, 226, 933, 588);
+		scrollPane.setBounds(78, 240, 1090, 526);
 		scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
 		scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 		contentPane.add(scrollPane);
@@ -251,47 +281,25 @@ public class Consultas extends JFrame implements Ventana {
 		}
 		scrollPane.setViewportView(table);
 
-		btnAlumPorTutor = new JButton("Alumnos por tutor");
-		btnAlumPorTutor.setBounds(40, 275, 175, 30);
-		contentPane.add(btnAlumPorTutor);
-
-		btnTutorPorCiclo = new JButton("Tutores por ciclo");
-		btnTutorPorCiclo.setBounds(40, 365, 175, 30);
-		contentPane.add(btnTutorPorCiclo);
-
-		btnAlumPorEmpresa = new JButton("Alumnos por empresa");
-		btnAlumPorEmpresa.setBounds(40, 455, 175, 30);
-		contentPane.add(btnAlumPorEmpresa);
-
-		btnAlumEnPracticas = new JButton("Alumnos en prácticas por tutor");
-		btnAlumEnPracticas.setBounds(11, 545, 227, 30);
-		contentPane.add(btnAlumEnPracticas);
-
-		btnInformeGeneralFCT = new JButton("Informe general FCT");
-		btnInformeGeneralFCT.setBounds(40, 641, 175, 30);
-		contentPane.add(btnInformeGeneralFCT);
-
 		JButton btnNewButton_5 = new JButton("Informe Aseguradoras");
 		btnNewButton_5.setBounds(35, 880, 175, 30);
 		contentPane.add(btnNewButton_5);
 
 		lblTitulo = new JLabel("Consultas");
-		lblTitulo.setBounds(35, 143, 157, 47);
+		lblTitulo.setBounds(78, 144, 157, 47);
 		contentPane.add(lblTitulo);
 		lblTitulo.setHorizontalAlignment(SwingConstants.CENTER);
 		lblTitulo.setForeground(new Color(0, 0, 0));
 		lblTitulo.setFont(new Font("Dialog", Font.PLAIN, 33));
 
-		lblAlumnosPorTutor = new JLabel("Alumnos por tutor");
-		lblAlumnosPorTutor.setHorizontalAlignment(SwingConstants.LEFT);
-		lblAlumnosPorTutor.setForeground(Color.BLACK);
-		lblAlumnosPorTutor.setFont(new Font("Tahoma", Font.PLAIN, 24));
-		lblAlumnosPorTutor.setBounds(246, 177, 209, 47);
-		contentPane.add(lblAlumnosPorTutor);
-
-		btnInformeAseguradoras = new JButton("Informe Aseguradoras");
-		btnInformeAseguradoras.setBounds(40, 729, 175, 30);
-		contentPane.add(btnInformeAseguradoras);
+		JComboBox comboBox = new JComboBox();
+		comboBox.setModel(
+				new DefaultComboBoxModel(new String[] { "Alumnos por tutor", "Tutores por ciclo", "Alumnos por empresa",
+						"Alumnos en prácticas por tutor", "Informe general FCT", "Informe Aseguradoras" }));
+		comboBox.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		comboBox.setForeground(Color.BLACK);
+		comboBox.setBounds(78, 203, 368, 27);
+		contentPane.add(comboBox);
 
 	}
 
@@ -315,5 +323,4 @@ public class Consultas extends JFrame implements Ventana {
 	public void setControlador(Controlador miC) {// crear atributos antes
 		this.miC = miC;
 	}
-
 }

@@ -74,7 +74,8 @@ public class FormularioAlumno extends JFrame implements Ventana{
 
 	public FormularioAlumno() {
 		setTitle("FormularioAlumno");
-		setBounds(100, 100, 1226, 905);
+		setBounds(100, 100, 1221, 800);
+		//setBounds(100, 100, 1226, 905);
 		contentPane = new JPanel();
 		contentPane.setBackground(new Color(253, 253, 255));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));

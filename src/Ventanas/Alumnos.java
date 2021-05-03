@@ -77,7 +77,6 @@ public class Alumnos extends JFrame implements Ventana {
 				graphics.drawRoundRect(0, 0, width - 1, height - 1, arcs.width, arcs.height);// paint border
 			}
 		};
-		// panelMenu.setBackground(new Color(217, 63, 49));
 		panelMenu.setBounds(159, 48, 1043, 59);
 		contentPane.add(panelMenu);
 		panelMenu.setLayout(null);
@@ -87,6 +86,10 @@ public class Alumnos extends JFrame implements Ventana {
 			@Override
 			public void mouseEntered(MouseEvent e) {
 				lblAlumnos.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+			}
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				miC.irVentana(lblAlumnos.getText());
 			}
 		});
 		lblAlumnos.setHorizontalAlignment(SwingConstants.CENTER);
@@ -109,6 +112,10 @@ public class Alumnos extends JFrame implements Ventana {
 			public void mouseEntered(MouseEvent e) {
 				lblEmpresas.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 			}
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				miC.irVentana(lblEmpresas.getText());
+			}
 		});
 		lblEmpresas.setHorizontalAlignment(SwingConstants.CENTER);
 		lblEmpresas.setForeground(Color.WHITE);
@@ -129,6 +136,10 @@ public class Alumnos extends JFrame implements Ventana {
 			@Override
 			public void mouseEntered(MouseEvent e) {
 				lblConsultas.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+			}
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				miC.irVentana(lblConsultas.getText());
 			}
 		});
 		lblConsultas.setHorizontalAlignment(SwingConstants.CENTER);
@@ -151,6 +162,10 @@ public class Alumnos extends JFrame implements Ventana {
 			public void mouseEntered(MouseEvent e) {
 				lblAyuda.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 			}
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				miC.irVentana(lblAyuda.getText());
+			}
 		});
 		lblAyuda.setHorizontalAlignment(SwingConstants.CENTER);
 		lblAyuda.setForeground(Color.WHITE);
@@ -172,6 +187,10 @@ public class Alumnos extends JFrame implements Ventana {
 			public void mouseEntered(MouseEvent e) {
 				lblLogout.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 			}
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				miC.irVentana(lblLogout.getText());
+			}
 		});
 		lblLogout.setFont(new Font("Oriya Sangam MN", Font.PLAIN, 20));
 		lblLogout.setHorizontalAlignment(SwingConstants.CENTER);
@@ -180,20 +199,32 @@ public class Alumnos extends JFrame implements Ventana {
 		panelMenu.add(lblLogout);
 
 		lblTutores = new JLabel("Tutores");
+		lblTutores.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				miC.irVentana(lblTutores.getText());
+			}
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				lblTutores.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+			}
+		});
 		lblTutores.setHorizontalAlignment(SwingConstants.CENTER);
 		lblTutores.setForeground(Color.WHITE);
 		lblTutores.setFont(new Font("Oriya Sangam MN", Font.PLAIN, 20));
 		lblTutores.setBounds(247, 6, 130, 47);
 		panelMenu.add(lblTutores);
 
+
 		separator_4 = new JSeparator();
 		separator_4.setPreferredSize(new Dimension(30, 3));
 		separator_4.setOrientation(SwingConstants.VERTICAL);
 		separator_4.setForeground(Color.BLACK);
 		separator_4.setBackground(Color.BLACK);
-		separator_4.setBounds(376, 6, 12, 47);
+		separator_4.setBounds(375, 7, 12, 47);
 		panelMenu.add(separator_4);
-
+		
+		
 		lblImgLogo = new JLabel("");
 		lblImgLogo.setIcon(new ImageIcon(AyudaListas.class.getResource("/img/logo.png")));
 		lblImgLogo.setBounds(35, 31, 90, 90);

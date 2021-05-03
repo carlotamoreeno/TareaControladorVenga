@@ -30,6 +30,8 @@ public class Lanzadera extends JFrame {
 	}
 
 	public Lanzadera() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
 		misVentanas = new Ventana[9];
 		misVentanas[0] = new Alumnos();
 		misVentanas[1] = new Consultas();

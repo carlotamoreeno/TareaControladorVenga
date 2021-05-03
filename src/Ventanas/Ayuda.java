@@ -73,132 +73,152 @@ public class Ayuda extends JFrame implements Ventana {
 		        graphics.drawRoundRect(0, 0, width-1, height-1, arcs.width, arcs.height);//paint border
 		     }
 		  };
-		//panelMenu.setBackground(new Color(217, 63, 49));
-		panelMenu.setBounds(159, 48, 1043, 59);
-		contentPane.add(panelMenu);
-		panelMenu.setLayout(null);
-		
-		lblAlumnos = new JLabel("Alumnos");
-		lblAlumnos.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseEntered(MouseEvent e) {
-				lblAlumnos.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-			}
-		});
-		lblAlumnos.setHorizontalAlignment(SwingConstants.CENTER);
-		lblAlumnos.setForeground(Color.WHITE);
-		lblAlumnos.setFont(new Font("Oriya Sangam MN", Font.PLAIN, 20));
-		lblAlumnos.setBounds(389, 6, 130, 47);
-		panelMenu.add(lblAlumnos);
+		  panelMenu.setBounds(159, 48, 1043, 59);
+			contentPane.add(panelMenu);
+			panelMenu.setLayout(null);
 
-		separator_0 = new JSeparator();
-		separator_0.setOrientation(SwingConstants.VERTICAL);
-		separator_0.setForeground(new Color(0, 0, 0));
-		separator_0.setBackground(new Color(0, 0, 0));
-		separator_0.setBounds(521, 6, 12, 47);
-		separator_0.setPreferredSize(new Dimension(30, 3));
-		panelMenu.add(separator_0);
+			lblAlumnos = new JLabel("Alumnos");
+			lblAlumnos.addMouseListener(new MouseAdapter() {
+				@Override
+				public void mouseEntered(MouseEvent e) {
+					lblAlumnos.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+				}
+				@Override
+				public void mouseClicked(MouseEvent e) {
+					miC.irVentana(lblAlumnos.getText());
+				}
+			});
+			lblAlumnos.setHorizontalAlignment(SwingConstants.CENTER);
+			lblAlumnos.setForeground(Color.WHITE);
+			lblAlumnos.setFont(new Font("Oriya Sangam MN", Font.PLAIN, 20));
+			lblAlumnos.setBounds(389, 6, 130, 47);
+			panelMenu.add(lblAlumnos);
 
-		lblEmpresas = new JLabel("Empresas");
-		lblEmpresas.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseEntered(MouseEvent e) {
-				lblEmpresas.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-			}
-		});
-		lblEmpresas.setHorizontalAlignment(SwingConstants.CENTER);
-		lblEmpresas.setForeground(Color.WHITE);
-		lblEmpresas.setFont(new Font("Oriya Sangam MN", Font.PLAIN, 20));
-		lblEmpresas.setBounds(543, 6, 111, 47);
-		panelMenu.add(lblEmpresas);
+			separator_0 = new JSeparator();
+			separator_0.setOrientation(SwingConstants.VERTICAL);
+			separator_0.setForeground(new Color(0, 0, 0));
+			separator_0.setBackground(new Color(0, 0, 0));
+			separator_0.setBounds(521, 6, 12, 47);
+			separator_0.setPreferredSize(new Dimension(30, 3));
+			panelMenu.add(separator_0);
 
-		separator_1 = new JSeparator();
-		separator_1.setPreferredSize(new Dimension(30, 3));
-		separator_1.setOrientation(SwingConstants.VERTICAL);
-		separator_1.setForeground(Color.BLACK);
-		separator_1.setBackground(Color.BLACK);
-		separator_1.setBounds(666, 6, 12, 47);
-		panelMenu.add(separator_1);
+			lblEmpresas = new JLabel("Empresas");
+			lblEmpresas.addMouseListener(new MouseAdapter() {
+				@Override
+				public void mouseEntered(MouseEvent e) {
+					lblEmpresas.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+				}
+				@Override
+				public void mouseClicked(MouseEvent e) {
+					miC.irVentana(lblEmpresas.getText());
+				}
+			});
+			lblEmpresas.setHorizontalAlignment(SwingConstants.CENTER);
+			lblEmpresas.setForeground(Color.WHITE);
+			lblEmpresas.setFont(new Font("Oriya Sangam MN", Font.PLAIN, 20));
+			lblEmpresas.setBounds(543, 6, 111, 47);
+			panelMenu.add(lblEmpresas);
 
-		lblConsultas = new JLabel("Consultas");
-		lblConsultas.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseEntered(MouseEvent e) {
-				lblConsultas.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-			}
-		});
-		lblConsultas.setHorizontalAlignment(SwingConstants.CENTER);
-		lblConsultas.setForeground(Color.WHITE);
-		lblConsultas.setFont(new Font("Oriya Sangam MN", Font.PLAIN, 20));
-		lblConsultas.setBounds(686, 6, 119, 47);
-		panelMenu.add(lblConsultas);
+			separator_1 = new JSeparator();
+			separator_1.setPreferredSize(new Dimension(30, 3));
+			separator_1.setOrientation(SwingConstants.VERTICAL);
+			separator_1.setForeground(Color.BLACK);
+			separator_1.setBackground(Color.BLACK);
+			separator_1.setBounds(666, 6, 12, 47);
+			panelMenu.add(separator_1);
 
-		separator_2 = new JSeparator();
-		separator_2.setPreferredSize(new Dimension(30, 3));
-		separator_2.setOrientation(SwingConstants.VERTICAL);
-		separator_2.setForeground(Color.BLACK);
-		separator_2.setBackground(Color.BLACK);
-		separator_2.setBounds(817, 6, 12, 47);
-		panelMenu.add(separator_2);
+			lblConsultas = new JLabel("Consultas");
+			lblConsultas.addMouseListener(new MouseAdapter() {
+				@Override
+				public void mouseEntered(MouseEvent e) {
+					lblConsultas.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+				}
+				@Override
+				public void mouseClicked(MouseEvent e) {
+					miC.irVentana(lblConsultas.getText());
+				}
+			});
+			lblConsultas.setHorizontalAlignment(SwingConstants.CENTER);
+			lblConsultas.setForeground(Color.WHITE);
+			lblConsultas.setFont(new Font("Oriya Sangam MN", Font.PLAIN, 20));
+			lblConsultas.setBounds(686, 6, 119, 47);
+			panelMenu.add(lblConsultas);
 
-		lblAyuda = new JLabel("Ayuda");
-		lblAyuda.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseEntered(MouseEvent e) {
-				lblAyuda.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-			}
-		});
-		lblAyuda.setHorizontalAlignment(SwingConstants.CENTER);
-		lblAyuda.setForeground(Color.WHITE);
-		lblAyuda.setFont(new Font("Oriya Sangam MN", Font.PLAIN, 20));
-		lblAyuda.setBounds(841, 6, 69, 47);
-		panelMenu.add(lblAyuda);
+			separator_2 = new JSeparator();
+			separator_2.setPreferredSize(new Dimension(30, 3));
+			separator_2.setOrientation(SwingConstants.VERTICAL);
+			separator_2.setForeground(Color.BLACK);
+			separator_2.setBackground(Color.BLACK);
+			separator_2.setBounds(817, 6, 12, 47);
+			panelMenu.add(separator_2);
 
-		separator_3 = new JSeparator();
-		separator_3.setPreferredSize(new Dimension(30, 3));
-		separator_3.setOrientation(SwingConstants.VERTICAL);
-		separator_3.setForeground(Color.BLACK);
-		separator_3.setBackground(Color.BLACK);
-		separator_3.setBounds(922, 6, 12, 47);
-		panelMenu.add(separator_3);
+			lblAyuda = new JLabel("Ayuda");
+			lblAyuda.addMouseListener(new MouseAdapter() {
+				@Override
+				public void mouseEntered(MouseEvent e) {
+					lblAyuda.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+				}
+				@Override
+				public void mouseClicked(MouseEvent e) {
+					miC.irVentana(lblAyuda.getText());
+				}
+			});
+			lblAyuda.setHorizontalAlignment(SwingConstants.CENTER);
+			lblAyuda.setForeground(Color.WHITE);
+			lblAyuda.setFont(new Font("Oriya Sangam MN", Font.PLAIN, 20));
+			lblAyuda.setBounds(841, 6, 69, 47);
+			panelMenu.add(lblAyuda);
 
-		lblLogout = new JLabel("Logout");
-		lblLogout.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseEntered(MouseEvent e) {
-				lblLogout.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-			}
-		});
-		lblLogout.setFont(new Font("Oriya Sangam MN", Font.PLAIN, 20));
-		lblLogout.setHorizontalAlignment(SwingConstants.CENTER);
-		lblLogout.setBounds(947, 6, 79, 47);
-		lblLogout.setForeground(new Color(255, 255, 255));
-		panelMenu.add(lblLogout);
+			separator_3 = new JSeparator();
+			separator_3.setPreferredSize(new Dimension(30, 3));
+			separator_3.setOrientation(SwingConstants.VERTICAL);
+			separator_3.setForeground(Color.BLACK);
+			separator_3.setBackground(Color.BLACK);
+			separator_3.setBounds(922, 6, 12, 47);
+			panelMenu.add(separator_3);
 
-		lblTutores = new JLabel("Tutores");
-		lblTutores.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				miC.irVentana(lblTutores.getText());
-			}
-			@Override
-			public void mouseEntered(MouseEvent e) {
-				lblTutores.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
-			}
-		});
-		lblTutores.setHorizontalAlignment(SwingConstants.CENTER);
-		lblTutores.setForeground(Color.WHITE);
-		lblTutores.setFont(new Font("Oriya Sangam MN", Font.PLAIN, 20));
-		lblTutores.setBounds(247, 6, 130, 47);
-		panelMenu.add(lblTutores);
-		
-		separator_4 = new JSeparator();
-		separator_4.setPreferredSize(new Dimension(30, 3));
-		separator_4.setOrientation(SwingConstants.VERTICAL);
-		separator_4.setForeground(Color.BLACK);
-		separator_4.setBackground(Color.BLACK);
-		separator_4.setBounds(376, 6, 12, 47);
-		panelMenu.add(separator_4);
+			lblLogout = new JLabel("Logout");
+			lblLogout.addMouseListener(new MouseAdapter() {
+				@Override
+				public void mouseEntered(MouseEvent e) {
+					lblLogout.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+				}
+				@Override
+				public void mouseClicked(MouseEvent e) {
+					miC.irVentana(lblLogout.getText());
+				}
+			});
+			lblLogout.setFont(new Font("Oriya Sangam MN", Font.PLAIN, 20));
+			lblLogout.setHorizontalAlignment(SwingConstants.CENTER);
+			lblLogout.setBounds(947, 6, 79, 47);
+			lblLogout.setForeground(new Color(255, 255, 255));
+			panelMenu.add(lblLogout);
+
+			lblTutores = new JLabel("Tutores");
+			lblTutores.addMouseListener(new MouseAdapter() {
+				@Override
+				public void mouseClicked(MouseEvent e) {
+					miC.irVentana(lblTutores.getText());
+				}
+				@Override
+				public void mouseEntered(MouseEvent e) {
+					lblTutores.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+				}
+			});
+			lblTutores.setHorizontalAlignment(SwingConstants.CENTER);
+			lblTutores.setForeground(Color.WHITE);
+			lblTutores.setFont(new Font("Oriya Sangam MN", Font.PLAIN, 20));
+			lblTutores.setBounds(247, 6, 130, 47);
+			panelMenu.add(lblTutores);
+
+
+			separator_4 = new JSeparator();
+			separator_4.setPreferredSize(new Dimension(30, 3));
+			separator_4.setOrientation(SwingConstants.VERTICAL);
+			separator_4.setForeground(Color.BLACK);
+			separator_4.setBackground(Color.BLACK);
+			separator_4.setBounds(375, 7, 12, 47);
+			panelMenu.add(separator_4);
 		
 		lblImgLogo = new JLabel("");
 		lblImgLogo.setIcon(new ImageIcon(AyudaListas.class.getResource("/img/logo.png")));
