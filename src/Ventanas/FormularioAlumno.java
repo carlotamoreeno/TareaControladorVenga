@@ -122,12 +122,12 @@ public class FormularioAlumno extends JFrame implements Ventana{
 				
 		btnModificar = new JButton("Guardar");
 		btnModificar.setFont(new Font("Tahoma", Font.PLAIN, 17));
-		btnModificar.setBounds(762, 148, 127, 24);
+		btnModificar.setBounds(798, 699, 127, 24);
 		contentPane.add(btnModificar);
 		
 		btnVolver = new JButton("Volver");
 		btnVolver.setFont(new Font("Tahoma", Font.PLAIN, 17));
-		btnVolver.setBounds(599, 148, 145, 24);
+		btnVolver.setBounds(635, 699, 145, 24);
 		contentPane.add(btnVolver);
 
 		JPanel panelFormulaio = new JPanel() {
@@ -137,84 +137,84 @@ public class FormularioAlumno extends JFrame implements Ventana{
 		panelFormulaio.setBorder(new LineBorder(new Color(165, 42, 42)));
 		panelFormulaio.setBackground(UIManager.getColor("CheckBox.light"));
 		panelFormulaio.setLayout(null);
-		panelFormulaio.setBounds(99, 184, 1084, 638);
+		panelFormulaio.setBounds(91, 132, 1043, 533);
 		contentPane.add(panelFormulaio);
 
 		lblNombre = new JLabel("Nombre:");
 		lblNombre.setForeground(Color.BLACK);
 		lblNombre.setBackground(UIManager.getColor("Button.light"));
 		lblNombre.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblNombre.setBounds(38, 54, 66, 31);
+		lblNombre.setBounds(41, 35, 66, 31);
 		panelFormulaio.add(lblNombre);
 
 		lblApellidos = new JLabel("Apellidos:");
 		lblApellidos.setBackground(UIManager.getColor("Button.light"));
 		lblApellidos.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblApellidos.setBounds(370, 54, 70, 31);
+		lblApellidos.setBounds(373, 35, 70, 31);
 		panelFormulaio.add(lblApellidos);
 
 		lblDni = new JLabel("DNI:");
 		lblDni.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		lblDni.setBackground(UIManager.getColor("Button.light"));
-		lblDni.setBounds(714, 54, 43, 31);
+		lblDni.setBounds(717, 35, 43, 31);
 		panelFormulaio.add(lblDni);
 
 		lblFnacimiento = new JLabel("Fecha Nacimiento:");
 		lblFnacimiento.setBackground(UIManager.getColor("Button.light"));
 		lblFnacimiento.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblFnacimiento.setBounds(38, 154, 147, 31);
+		lblFnacimiento.setBounds(41, 99, 147, 31);
 		panelFormulaio.add(lblFnacimiento);
 
 		lblNacionalidad = new JLabel("Nacionalidad:");
 		lblNacionalidad.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		lblNacionalidad.setBackground(UIManager.getColor("Button.light"));
-		lblNacionalidad.setBounds(370, 154, 110, 31);
+		lblNacionalidad.setBounds(373, 99, 110, 31);
 		panelFormulaio.add(lblNacionalidad);
 
 		lblExpediente = new JLabel("Expediente:");
 		lblExpediente.setBackground(UIManager.getColor("Button.light"));
 		lblExpediente.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblExpediente.setBounds(714, 154, 100, 20);
+		lblExpediente.setBounds(717, 99, 100, 20);
 		panelFormulaio.add(lblExpediente);
 
 		lblFinicio = new JLabel("Fecha Inicio:");
 		lblFinicio.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		lblFinicio.setBackground(UIManager.getColor("Button.light"));
-		lblFinicio.setBounds(38, 254, 90, 31);
+		lblFinicio.setBounds(41, 182, 90, 31);
 		panelFormulaio.add(lblFinicio);
 
 		lblFfin = new JLabel("Fecha Fin:");
 		lblFfin.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		lblFfin.setBackground(UIManager.getColor("Button.light"));
-		lblFfin.setBounds(370, 254, 121, 20);
+		lblFfin.setBounds(373, 182, 121, 20);
 		panelFormulaio.add(lblFfin);
 
 		lblAnoAcad = new JLabel("A\u00F1o Academico:");
 		lblAnoAcad.setBackground(UIManager.getColor("Button.light"));
 		lblAnoAcad.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblAnoAcad.setBounds(714, 254, 122, 20);
+		lblAnoAcad.setBounds(717, 182, 122, 20);
 		panelFormulaio.add(lblAnoAcad);
 
 		lblHorario = new JLabel("Horario:");
 		lblHorario.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblHorario.setBounds(38, 354, 66, 31);
+		lblHorario.setBounds(38, 247, 66, 31);
 		panelFormulaio.add(lblHorario);
 
 		lblTempresa = new JLabel("Tutor Empresa:");
 		lblTempresa.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		lblTempresa.setBackground(UIManager.getColor("Button.light"));
-		lblTempresa.setBounds(370, 354, 147, 20);
+		lblTempresa.setBounds(370, 247, 147, 20);
 		panelFormulaio.add(lblTempresa);
 
 		lblEmpresa = new JLabel("Empresa:");
 		lblEmpresa.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		lblEmpresa.setBackground(UIManager.getColor("Button.light"));
-		lblEmpresa.setBounds(714, 354, 110, 20);
+		lblEmpresa.setBounds(714, 247, 110, 20);
 		panelFormulaio.add(lblEmpresa);
 
 		JSeparator separator = new JSeparator();
 		separator.setForeground(new Color(128, 0, 0));
-		separator.setBounds(38, 213, 1007, 15);
+		separator.setBounds(17, 157, 1007, 15);
 		panelFormulaio.add(separator);
 
 		textNombre = new JTextField() {
@@ -237,7 +237,7 @@ public class FormularioAlumno extends JFrame implements Ventana{
 		};
 		textNombre.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		textNombre.setBorder(null);
-		textNombre.setBounds(116, 54, 227, 29);
+		textNombre.setBounds(119, 35, 227, 29);
 		panelFormulaio.add(textNombre);
 		textNombre.setColumns(10);
 
@@ -261,7 +261,7 @@ public class FormularioAlumno extends JFrame implements Ventana{
 		};
 		textApellidos.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		textApellidos.setBorder(null);
-		textApellidos.setBounds(455, 54, 227, 29);
+		textApellidos.setBounds(458, 35, 227, 29);
 		panelFormulaio.add(textApellidos);
 		textApellidos.setColumns(10);
 
@@ -285,7 +285,7 @@ public class FormularioAlumno extends JFrame implements Ventana{
 		};
 		textDni.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		textDni.setBorder(null);
-		textDni.setBounds(778, 54, 227, 29);
+		textDni.setBounds(781, 35, 227, 29);
 		panelFormulaio.add(textDni);
 		textDni.setColumns(10);
 
@@ -310,7 +310,7 @@ public class FormularioAlumno extends JFrame implements Ventana{
 		textFnacimiento.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		textFnacimiento.setToolTipText("dd/mm/yyyy");
 		textFnacimiento.setBorder(null);
-		textFnacimiento.setBounds(184, 154, 159, 29);
+		textFnacimiento.setBounds(187, 99, 159, 29);
 		panelFormulaio.add(textFnacimiento);
 		textFnacimiento.setColumns(10);
 
@@ -334,7 +334,7 @@ public class FormularioAlumno extends JFrame implements Ventana{
 		};
 		textNacionalidad.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		textNacionalidad.setBorder(null);
-		textNacionalidad.setBounds(488, 154, 194, 29);
+		textNacionalidad.setBounds(491, 99, 194, 29);
 		panelFormulaio.add(textNacionalidad);
 		textNacionalidad.setColumns(10);
 
@@ -358,7 +358,7 @@ public class FormularioAlumno extends JFrame implements Ventana{
 		};
 		textExpediente.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		textExpediente.setBorder(null);
-		textExpediente.setBounds(829, 154, 179, 29);
+		textExpediente.setBounds(832, 99, 179, 29);
 		panelFormulaio.add(textExpediente);
 		textExpediente.setColumns(10);
 
@@ -383,7 +383,7 @@ public class FormularioAlumno extends JFrame implements Ventana{
 		textFinicio.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		textFinicio.setToolTipText("dd/mm/yyyy");
 		textFinicio.setBorder(null);
-		textFinicio.setBounds(148, 254, 195, 29);
+		textFinicio.setBounds(151, 182, 195, 29);
 		panelFormulaio.add(textFinicio);
 		textFinicio.setColumns(10);
 
@@ -407,7 +407,7 @@ public class FormularioAlumno extends JFrame implements Ventana{
 		};
 		textHorario.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		textHorario.setBorder(null);
-		textHorario.setBounds(117, 354, 226, 29);
+		textHorario.setBounds(117, 247, 226, 29);
 		panelFormulaio.add(textHorario);
 		textHorario.setColumns(10);
 
@@ -432,7 +432,7 @@ public class FormularioAlumno extends JFrame implements Ventana{
 		textFfin.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		textFfin.setToolTipText("dd/mm/yyyy");
 		textFfin.setBorder(null);
-		textFfin.setBounds(455, 254, 227, 29);
+		textFfin.setBounds(458, 182, 227, 29);
 		panelFormulaio.add(textFfin);
 		textFfin.setColumns(10);
 
@@ -456,7 +456,7 @@ public class FormularioAlumno extends JFrame implements Ventana{
 		};
 		textTempresa.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		textTempresa.setBorder(null);
-		textTempresa.setBounds(488, 354, 194, 29);
+		textTempresa.setBounds(488, 247, 194, 29);
 		panelFormulaio.add(textTempresa);
 		textTempresa.setColumns(10);
 
@@ -480,7 +480,7 @@ public class FormularioAlumno extends JFrame implements Ventana{
 		};
 		textAnoAcad.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		textAnoAcad.setBorder(null);
-		textAnoAcad.setBounds(846, 254, 159, 29);
+		textAnoAcad.setBounds(849, 182, 159, 29);
 		panelFormulaio.add(textAnoAcad);
 		textAnoAcad.setColumns(10);
 		
@@ -491,7 +491,7 @@ public class FormularioAlumno extends JFrame implements Ventana{
 		panelanexo.setBorder(new LineBorder(new Color(0, 0, 0), 2, true));
 		panelanexo.setBackground(Color.WHITE);
 		panelanexo.setLayout(null);
-		panelanexo.setBounds(38, 428, 980, 194);
+		panelanexo.setBounds(38, 312, 980, 194);
 		panelFormulaio.add(panelanexo);
 		
 		rdbtnNewRadioButton = new JRadioButton("Completed");
@@ -541,7 +541,7 @@ public class FormularioAlumno extends JFrame implements Ventana{
 		lnlAnexo3.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		
 		lnlAnexo5 = new JLabel("Anexo 5");
-		lnlAnexo5.setBounds(220, 9, 174, 46);
+		lnlAnexo5.setBounds(218, 9, 174, 46);
 		panelanexo.add(lnlAnexo5);
 		lnlAnexo5.setForeground(new Color(0, 0, 0));
 		lnlAnexo5.setHorizontalAlignment(SwingConstants.CENTER);
@@ -608,12 +608,12 @@ public class FormularioAlumno extends JFrame implements Ventana{
 		comboBoxEmpresa.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		comboBoxEmpresa.setModel(new DefaultComboBoxModel(new String[] {"Deloite", "Accenture", "Telefonica", "Apple", "Movistar"}));
 		comboBoxEmpresa.setForeground(Color.BLACK);
-		comboBoxEmpresa.setBounds(797, 356, 227, 20);
+		comboBoxEmpresa.setBounds(797, 249, 227, 20);
 		panelFormulaio.add(comboBoxEmpresa);
 		
 		btnCancelar = new JButton("Cancelar");
 		btnCancelar.setFont(new Font("Tahoma", Font.PLAIN, 17));
-		btnCancelar.setBounds(915, 148, 145, 24);
+		btnCancelar.setBounds(951, 699, 145, 24);
 		contentPane.add(btnCancelar);
 						
 						

@@ -104,9 +104,9 @@ public class FormularioTutores extends JFrame implements Ventana {
 			}
 		};
 		panelFormulario.setBorder(new LineBorder(new Color(128, 0, 0)));
-		panelFormulario.setBackground(new Color(255, 255, 255));
+		panelFormulario.setBackground(UIManager.getColor("CheckBox.light"));
 		panelFormulario.setLayout(null);
-		panelFormulario.setBounds(63, 251, 1084, 435);
+		panelFormulario.setBounds(64, 200, 1084, 435);
 		contentPane.add(panelFormulario);
 
 		lblNombre = new JLabel("Nombre:");
@@ -299,18 +299,18 @@ public class FormularioTutores extends JFrame implements Ventana {
 		panelFormulario.add(comboBoxCentro);
 
 		btnModificar = new JButton("Guardar");
-		btnModificar.setBounds(811, 194, 127, 24);
+		btnModificar.setBounds(828, 688, 127, 24);
 		contentPane.add(btnModificar);
 		btnModificar.setFont(new Font("Tahoma", Font.PLAIN, 17));
 
 		btnVolver = new JButton("Volver");
-		btnVolver.setBounds(641, 194, 145, 24);
+		btnVolver.setBounds(658, 688, 145, 24);
 		contentPane.add(btnVolver);
 		btnVolver.setFont(new Font("Tahoma", Font.PLAIN, 17));
 
 		btnCancelar = new JButton("Cancelar");
 		btnCancelar.setFont(new Font("Tahoma", Font.PLAIN, 17));
-		btnCancelar.setBounds(985, 192, 117, 29);
+		btnCancelar.setBounds(1002, 686, 117, 29);
 		contentPane.add(btnCancelar);
 
 	}
