@@ -122,12 +122,12 @@ public class FormularioAlumno extends JFrame implements Ventana{
 				
 		btnModificar = new JButton("Guardar");
 		btnModificar.setFont(new Font("Tahoma", Font.PLAIN, 17));
-		btnModificar.setBounds(798, 699, 127, 24);
+		btnModificar.setBounds(798, 699, 127, 29);
 		contentPane.add(btnModificar);
 		
 		btnVolver = new JButton("Volver");
 		btnVolver.setFont(new Font("Tahoma", Font.PLAIN, 17));
-		btnVolver.setBounds(635, 699, 145, 24);
+		btnVolver.setBounds(635, 699, 145, 29);
 		contentPane.add(btnVolver);
 
 		JPanel panelFormulaio = new JPanel() {
@@ -613,7 +613,7 @@ public class FormularioAlumno extends JFrame implements Ventana{
 		
 		btnCancelar = new JButton("Cancelar");
 		btnCancelar.setFont(new Font("Tahoma", Font.PLAIN, 17));
-		btnCancelar.setBounds(951, 699, 145, 24);
+		btnCancelar.setBounds(943, 699, 145, 29);
 		contentPane.add(btnCancelar);
 						
 						

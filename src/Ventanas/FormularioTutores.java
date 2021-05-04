@@ -299,18 +299,18 @@ public class FormularioTutores extends JFrame implements Ventana {
 		panelFormulario.add(comboBoxCentro);
 
 		btnModificar = new JButton("Guardar");
-		btnModificar.setBounds(828, 688, 127, 24);
+		btnModificar.setBounds(828, 688, 127, 27);
 		contentPane.add(btnModificar);
 		btnModificar.setFont(new Font("Tahoma", Font.PLAIN, 17));
 
 		btnVolver = new JButton("Volver");
-		btnVolver.setBounds(658, 688, 145, 24);
+		btnVolver.setBounds(658, 688, 145, 27);
 		contentPane.add(btnVolver);
 		btnVolver.setFont(new Font("Tahoma", Font.PLAIN, 17));
 
 		btnCancelar = new JButton("Cancelar");
 		btnCancelar.setFont(new Font("Tahoma", Font.PLAIN, 17));
-		btnCancelar.setBounds(1002, 686, 117, 29);
+		btnCancelar.setBounds(983, 687, 117, 29);
 		contentPane.add(btnCancelar);
 
 	}
