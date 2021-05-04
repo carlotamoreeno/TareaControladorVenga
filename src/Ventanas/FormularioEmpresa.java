@@ -25,6 +25,7 @@ import javax.swing.JButton;
 import javax.swing.JTextField;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.UIManager;
 /**
  * 
  * @author ana
@@ -93,12 +94,6 @@ public class FormularioEmpresa extends JFrame implements Ventana{
 		lblImgLogo.setBounds(35, 31, 90, 90);
 		contentPane.add(lblImgLogo);
 
-		lblNombre = new JLabel("Nombre:");
-		lblNombre.setHorizontalAlignment(SwingConstants.LEFT);
-		lblNombre.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblNombre.setBounds(96, 296, 73, 33);
-		contentPane.add(lblNombre);
-
 		txtNombre = new JTextField() {
 			@Override
 			protected void paintComponent(Graphics g) {
@@ -126,44 +121,6 @@ public class FormularioEmpresa extends JFrame implements Ventana{
 		contentPane.add(txtNombre);
 		txtNombre.setColumns(10);
 
-		lblCiff = new JLabel("CIFF:");
-		lblCiff.setHorizontalAlignment(SwingConstants.LEFT);
-		lblCiff.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblCiff.setBounds(125, 406, 55, 33);
-		contentPane.add(lblCiff);
-
-		txtCiff = new JTextField() {
-			@Override
-			protected void paintComponent(Graphics g) {
-				super.paintComponent(g);
-				Dimension arcs = new Dimension(25, 25); // Border corners arcs {width,height}, change this to whatever
-														// you want
-				int width = getWidth();
-				int height = getHeight();
-				Graphics2D graphics = (Graphics2D) g;
-				graphics.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-
-				// Draws the rounded panel with borders.
-				graphics.setColor(new Color(250, 128, 114, 25));
-				graphics.fillRoundRect(0, 0, width - 1, height - 1, arcs.width, arcs.height);// paint background
-				graphics.setColor(new Color(250, 128, 114, 25));
-				graphics.drawRoundRect(0, 0, width - 1, height - 1, arcs.width, arcs.height);// paint border
-			}
-		};
-		txtCiff.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		txtCiff.setBorder(null);
-		txtCiff.setBounds(223, 410, 184, 29);
-		txtCiff.setOpaque(false);
-		// txtNombre.setBorder(new LineBorder(Color.RED, 2));
-		contentPane.add(txtCiff);
-		txtCiff.setColumns(10);
-
-		lblDireccion = new JLabel("Direcci\u00C3\u00B3n:");
-		lblDireccion.setHorizontalAlignment(SwingConstants.LEFT);
-		lblDireccion.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblDireccion.setBounds(125, 506, 90, 33);
-		contentPane.add(lblDireccion);
-
 		txtDireccion = new JTextField() {
 			@Override
 			protected void paintComponent(Graphics g) {
@@ -190,70 +147,6 @@ public class FormularioEmpresa extends JFrame implements Ventana{
 		contentPane.add(txtDireccion);
 		txtDireccion.setColumns(10);
 
-		lblTelefono = new JLabel("Tel\u00C3\u00A9fono:");
-		lblTelefono.setHorizontalAlignment(SwingConstants.LEFT);
-		lblTelefono.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblTelefono.setBounds(849, 406, 90, 33);
-		contentPane.add(lblTelefono);
-
-		txtTelefono = new JTextField() {
-			@Override
-			protected void paintComponent(Graphics g) {
-				super.paintComponent(g);
-				Dimension arcs = new Dimension(25, 25); // Border corners arcs {width,height}, change this to whatever
-														// you want
-				int width = getWidth();
-				int height = getHeight();
-				Graphics2D graphics = (Graphics2D) g;
-				graphics.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-
-				// Draws the rounded panel with borders.
-				graphics.setColor(new Color(250, 128, 114, 25));
-				graphics.fillRoundRect(0, 0, width - 1, height - 1, arcs.width, arcs.height);// paint background
-				graphics.setColor(new Color(250, 128, 114, 25));
-				graphics.drawRoundRect(0, 0, width - 1, height - 1, arcs.width, arcs.height);// paint border
-			}
-		};
-		txtTelefono.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		txtTelefono.setBorder(null);
-		txtTelefono.setBounds(961, 410, 184, 29);
-		txtTelefono.setOpaque(false);
-		// txtNombre.setBorder(new LineBorder(Color.RED, 2));
-		contentPane.add(txtTelefono);
-		txtTelefono.setColumns(10);
-
-		lblLocalidad = new JLabel("Localidad:");
-		lblLocalidad.setHorizontalAlignment(SwingConstants.LEFT);
-		lblLocalidad.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblLocalidad.setBounds(849, 506, 90, 33);
-		contentPane.add(lblLocalidad);
-
-		txtLocalidad = new JTextField() {
-			@Override
-			protected void paintComponent(Graphics g) {
-				super.paintComponent(g);
-				Dimension arcs = new Dimension(25, 25); // Border corners arcs {width,height}, change this to whatever
-														// you want
-				int width = getWidth();
-				int height = getHeight();
-				Graphics2D graphics = (Graphics2D) g;
-				graphics.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-
-				// Draws the rounded panel with borders.
-				graphics.setColor(new Color(250, 128, 114, 25));
-				graphics.fillRoundRect(0, 0, width - 1, height - 1, arcs.width, arcs.height);// paint background
-				graphics.setColor(new Color(250, 128, 114, 25));
-				graphics.drawRoundRect(0, 0, width - 1, height - 1, arcs.width, arcs.height);// paint border
-			}
-		};
-		txtLocalidad.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		txtLocalidad.setBorder(null);
-		txtLocalidad.setBounds(961, 510, 184, 29);
-		txtLocalidad.setOpaque(false);
-		// txtNombre.setBorder(new LineBorder(Color.RED, 2));
-		contentPane.add(txtLocalidad);
-		txtLocalidad.setColumns(10);
-
 		btnGuardar = new JButton("Guardar");
 		btnGuardar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -261,143 +154,247 @@ public class FormularioEmpresa extends JFrame implements Ventana{
 		});
 		btnGuardar.setBounds(909, 652, 117, 29);
 		contentPane.add(btnGuardar);
-
-		lblRepresentante = new JLabel("Representante:");
-		lblRepresentante.setHorizontalAlignment(SwingConstants.LEFT);
-		lblRepresentante.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblRepresentante.setBounds(400, 296, 133, 33);
-		contentPane.add(lblRepresentante);
-
-		txtRepresentante = new JTextField() {
-			@Override
-			protected void paintComponent(Graphics g) {
-				super.paintComponent(g);
-				Dimension arcs = new Dimension(25, 25); // Border corners arcs {width,height}, change this to whatever
-														// you want
-				int width = getWidth();
-				int height = getHeight();
-				Graphics2D graphics = (Graphics2D) g;
-				graphics.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-
-				// Draws the rounded panel with borders.
-				graphics.setColor(new Color(250, 128, 114, 25));
-				graphics.fillRoundRect(0, 0, width - 1, height - 1, arcs.width, arcs.height);// paint background
-				graphics.setColor(new Color(250, 128, 114, 25));
-				graphics.drawRoundRect(0, 0, width - 1, height - 1, arcs.width, arcs.height);// paint border
-			}
-		};
-		txtRepresentante.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		txtRepresentante.setBorder(null);
-		txtRepresentante.setBounds(580, 300, 184, 29);
-		txtRepresentante.setOpaque(false);
-		// txtNombre.setBorder(new LineBorder(Color.RED, 2));
-		contentPane.add(txtRepresentante);
-		txtLocalidad.setColumns(10);
-
-		
-		lblEmail = new JLabel("Email:");
-		lblEmail.setHorizontalAlignment(SwingConstants.LEFT);
-		lblEmail.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblEmail.setBounds(455, 406, 47, 33);
-		contentPane.add(lblEmail);
-
-		txtEmail = new JTextField() {
-			@Override
-			protected void paintComponent(Graphics g) {
-				super.paintComponent(g);
-				Dimension arcs = new Dimension(25, 25); // Border corners arcs {width,height}, change this to whatever
-														// you want
-				int width = getWidth();
-				int height = getHeight();
-				Graphics2D graphics = (Graphics2D) g;
-				graphics.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-
-				// Draws the rounded panel with borders.
-				graphics.setColor(new Color(250, 128, 114, 25));
-				graphics.fillRoundRect(0, 0, width - 1, height - 1, arcs.width, arcs.height);// paint background
-				graphics.setColor(new Color(250, 128, 114, 25));
-				graphics.drawRoundRect(0, 0, width - 1, height - 1, arcs.width, arcs.height);// paint border
-			}
-		};
-		txtEmail.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		txtEmail.setBorder(null);
-		txtEmail.setBounds(609, 410, 184, 29);
-		txtEmail.setOpaque(false);
-		// txtNombre.setBorder(new LineBorder(Color.RED, 2));
-		contentPane.add(txtEmail);
-		txtEmail.setColumns(10);
-		
-		lblNconvenio = new JLabel("N\u00C2\u00BA Convenio:");
-		lblNconvenio.setHorizontalAlignment(SwingConstants.LEFT);
-		lblNconvenio.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblNconvenio.setBounds(438, 506, 117, 33);
-		contentPane.add(lblNconvenio);
-
-		txtNconvenio = new JTextField() {
-			@Override
-			protected void paintComponent(Graphics g) {
-				super.paintComponent(g);
-				Dimension arcs = new Dimension(25, 25); // Border corners arcs {width,height}, change this to whatever
-														// you want
-				int width = getWidth();
-				int height = getHeight();
-				Graphics2D graphics = (Graphics2D) g;
-				graphics.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-
-				// Draws the rounded panel with borders.
-				graphics.setColor(new Color(250, 128, 114, 25));
-				graphics.fillRoundRect(0, 0, width - 1, height - 1, arcs.width, arcs.height);// paint background
-				graphics.setColor(new Color(250, 128, 114, 25));
-				graphics.drawRoundRect(0, 0, width - 1, height - 1, arcs.width, arcs.height);// paint border
-			}
-		};
-		txtNconvenio.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		txtNconvenio.setBorder(null);
-		txtNconvenio.setBounds(609, 510, 184, 29);
-		txtNconvenio.setOpaque(false);
-		// txtNombre.setBorder(new LineBorder(Color.RED, 2));
-		contentPane.add(txtNconvenio);
-		txtNconvenio.setColumns(10);
-
-		
-		lblAnexo1 = new JLabel("Anexo 1:");
-		lblAnexo1.setHorizontalAlignment(SwingConstants.LEFT);
-		lblAnexo1.setFont(new Font("Tahoma", Font.PLAIN, 16));
-		lblAnexo1.setBounds(799, 296, 83, 33);
-		contentPane.add(lblAnexo1);
-
-		txtAnexo1 = new JTextField() {
-			@Override
-			protected void paintComponent(Graphics g) {
-				super.paintComponent(g);
-				Dimension arcs = new Dimension(25, 25); // Border corners arcs {width,height}, change this to whatever
-														// you want
-				int width = getWidth();
-				int height = getHeight();
-				Graphics2D graphics = (Graphics2D) g;
-				graphics.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-
-				// Draws the rounded panel with borders.
-				graphics.setColor(new Color(250, 128, 114, 25));
-				graphics.fillRoundRect(0, 0, width - 1, height - 1, arcs.width, arcs.height);// paint background
-				graphics.setColor(new Color(250, 128, 114, 25));
-				graphics.drawRoundRect(0, 0, width - 1, height - 1, arcs.width, arcs.height);// paint border
-			}
-		};
-		txtAnexo1.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		txtAnexo1.setToolTipText("dd/mm/yyyy");
-		txtAnexo1.setBorder(null);
-		txtAnexo1.setBounds(961, 310, 184, 29);
-		txtAnexo1.setOpaque(false);
-		// txtNombre.setBorder(new LineBorder(Color.RED, 2));
-		contentPane.add(txtAnexo1);
-		txtAnexo1.setColumns(10);
 		
 		panelFormulario = new JPanel();
 		panelFormulario.setBorder(new LineBorder(new Color(128, 0, 0)));
-		panelFormulario.setBackground(new Color(253, 253, 255));
+		panelFormulario.setBackground(UIManager.getColor("CheckBox.light"));
 		panelFormulario.setBounds(54, 240, 1105, 360);
 		contentPane.add(panelFormulario);
+		panelFormulario.setLayout(null);
+		
+				lblCiff = new JLabel("CIFF:");
+				lblCiff.setBounds(39, 165, 55, 33);
+				panelFormulario.add(lblCiff);
+				lblCiff.setHorizontalAlignment(SwingConstants.LEFT);
+				lblCiff.setFont(new Font("Tahoma", Font.PLAIN, 16));
+				
+						lblDireccion = new JLabel("Direcci\u00F3n:");
+						lblDireccion.setBounds(39, 267, 90, 33);
+						panelFormulario.add(lblDireccion);
+						lblDireccion.setHorizontalAlignment(SwingConstants.LEFT);
+						lblDireccion.setFont(new Font("Tahoma", Font.PLAIN, 16));
+						
+								lblNombre = new JLabel("Nombre:");
+								lblNombre.setBounds(39, 54, 73, 33);
+								panelFormulario.add(lblNombre);
+								lblNombre.setHorizontalAlignment(SwingConstants.LEFT);
+								lblNombre.setFont(new Font("Tahoma", Font.PLAIN, 16));
+								
+										txtCiff = new JTextField() {
+											@Override
+											protected void paintComponent(Graphics g) {
+												super.paintComponent(g);
+												Dimension arcs = new Dimension(25, 25); // Border corners arcs {width,height}, change this to whatever
+																						// you want
+												int width = getWidth();
+												int height = getHeight();
+												Graphics2D graphics = (Graphics2D) g;
+												graphics.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+								
+												// Draws the rounded panel with borders.
+												graphics.setColor(new Color(250, 128, 114, 25));
+												graphics.fillRoundRect(0, 0, width - 1, height - 1, arcs.width, arcs.height);// paint background
+												graphics.setColor(new Color(250, 128, 114, 25));
+												graphics.drawRoundRect(0, 0, width - 1, height - 1, arcs.width, arcs.height);// paint border
+											}
+										};
+										txtCiff.setBackground(Color.WHITE);
+										txtCiff.setBounds(114, 167, 184, 29);
+										panelFormulario.add(txtCiff);
+										txtCiff.setFont(new Font("Tahoma", Font.PLAIN, 15));
+										txtCiff.setBorder(null);
+										txtCiff.setOpaque(false);
+										txtCiff.setColumns(10);
+										
+												
+												lblEmail = new JLabel("Email:");
+												lblEmail.setBounds(344, 165, 47, 33);
+												panelFormulario.add(lblEmail);
+												lblEmail.setHorizontalAlignment(SwingConstants.LEFT);
+												lblEmail.setFont(new Font("Tahoma", Font.PLAIN, 16));
+												
+												lblNconvenio = new JLabel("N\u00BA Convenio:");
+												lblNconvenio.setBounds(344, 267, 117, 33);
+												panelFormulario.add(lblNconvenio);
+												lblNconvenio.setHorizontalAlignment(SwingConstants.LEFT);
+												lblNconvenio.setFont(new Font("Tahoma", Font.PLAIN, 16));
+												
+														lblRepresentante = new JLabel("Representante:");
+														lblRepresentante.setBounds(344, 54, 133, 33);
+														panelFormulario.add(lblRepresentante);
+														lblRepresentante.setHorizontalAlignment(SwingConstants.LEFT);
+														lblRepresentante.setFont(new Font("Tahoma", Font.PLAIN, 16));
+														
+																txtEmail = new JTextField() {
+																	@Override
+																	protected void paintComponent(Graphics g) {
+																		super.paintComponent(g);
+																		Dimension arcs = new Dimension(25, 25); // Border corners arcs {width,height}, change this to whatever
+																												// you want
+																		int width = getWidth();
+																		int height = getHeight();
+																		Graphics2D graphics = (Graphics2D) g;
+																		graphics.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+														
+																		// Draws the rounded panel with borders.
+																		graphics.setColor(new Color(250, 128, 114, 25));
+																		graphics.fillRoundRect(0, 0, width - 1, height - 1, arcs.width, arcs.height);// paint background
+																		graphics.setColor(new Color(250, 128, 114, 25));
+																		graphics.drawRoundRect(0, 0, width - 1, height - 1, arcs.width, arcs.height);// paint border
+																	}
+																};
+																txtEmail.setBounds(413, 167, 184, 29);
+																panelFormulario.add(txtEmail);
+																txtEmail.setFont(new Font("Tahoma", Font.PLAIN, 15));
+																txtEmail.setBorder(null);
+																txtEmail.setOpaque(false);
+																txtEmail.setColumns(10);
+																
+																		txtAnexo1 = new JTextField() {
+																			@Override
+																			protected void paintComponent(Graphics g) {
+																				super.paintComponent(g);
+																				Dimension arcs = new Dimension(25, 25); // Border corners arcs {width,height}, change this to whatever
+																														// you want
+																				int width = getWidth();
+																				int height = getHeight();
+																				Graphics2D graphics = (Graphics2D) g;
+																				graphics.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+																
+																				// Draws the rounded panel with borders.
+																				graphics.setColor(new Color(250, 128, 114, 25));
+																				graphics.fillRoundRect(0, 0, width - 1, height - 1, arcs.width, arcs.height);// paint background
+																				graphics.setColor(new Color(250, 128, 114, 25));
+																				graphics.drawRoundRect(0, 0, width - 1, height - 1, arcs.width, arcs.height);// paint border
+																			}
+																		};
+																		txtAnexo1.setBounds(833, 56, 184, 29);
+																		panelFormulario.add(txtAnexo1);
+																		txtAnexo1.setFont(new Font("Tahoma", Font.PLAIN, 15));
+																		txtAnexo1.setToolTipText("dd/mm/yyyy");
+																		txtAnexo1.setBorder(null);
+																		txtAnexo1.setOpaque(false);
+																		txtAnexo1.setColumns(10);
+																		
+																				txtRepresentante = new JTextField() {
+																					@Override
+																					protected void paintComponent(Graphics g) {
+																						super.paintComponent(g);
+																						Dimension arcs = new Dimension(25, 25); // Border corners arcs {width,height}, change this to whatever
+																																// you want
+																						int width = getWidth();
+																						int height = getHeight();
+																						Graphics2D graphics = (Graphics2D) g;
+																						graphics.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+																		
+																						// Draws the rounded panel with borders.
+																						graphics.setColor(new Color(250, 128, 114, 25));
+																						graphics.fillRoundRect(0, 0, width - 1, height - 1, arcs.width, arcs.height);// paint background
+																						graphics.setColor(new Color(250, 128, 114, 25));
+																						graphics.drawRoundRect(0, 0, width - 1, height - 1, arcs.width, arcs.height);// paint border
+																					}
+																				};
+																				txtRepresentante.setBounds(487, 56, 184, 29);
+																				panelFormulario.add(txtRepresentante);
+																				txtRepresentante.setFont(new Font("Tahoma", Font.PLAIN, 15));
+																				txtRepresentante.setBorder(null);
+																				txtRepresentante.setOpaque(false);
+																				
+																						lblTelefono = new JLabel("Tel\u00E9fono:");
+																						lblTelefono.setBounds(742, 165, 90, 33);
+																						panelFormulario.add(lblTelefono);
+																						lblTelefono.setHorizontalAlignment(SwingConstants.LEFT);
+																						lblTelefono.setFont(new Font("Tahoma", Font.PLAIN, 16));
+																						
+																								lblLocalidad = new JLabel("Localidad:");
+																								lblLocalidad.setBounds(742, 267, 90, 33);
+																								panelFormulario.add(lblLocalidad);
+																								lblLocalidad.setHorizontalAlignment(SwingConstants.LEFT);
+																								lblLocalidad.setFont(new Font("Tahoma", Font.PLAIN, 16));
+																								
+																										
+																										lblAnexo1 = new JLabel("Anexo 1:");
+																										lblAnexo1.setBounds(742, 54, 83, 33);
+																										panelFormulario.add(lblAnexo1);
+																										lblAnexo1.setHorizontalAlignment(SwingConstants.LEFT);
+																										lblAnexo1.setFont(new Font("Tahoma", Font.PLAIN, 16));
+																										
+																												txtTelefono = new JTextField() {
+																													@Override
+																													protected void paintComponent(Graphics g) {
+																														super.paintComponent(g);
+																														Dimension arcs = new Dimension(25, 25); // Border corners arcs {width,height}, change this to whatever
+																																								// you want
+																														int width = getWidth();
+																														int height = getHeight();
+																														Graphics2D graphics = (Graphics2D) g;
+																														graphics.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+																										
+																														// Draws the rounded panel with borders.
+																														graphics.setColor(new Color(250, 128, 114, 25));
+																														graphics.fillRoundRect(0, 0, width - 1, height - 1, arcs.width, arcs.height);// paint background
+																														graphics.setColor(new Color(250, 128, 114, 25));
+																														graphics.drawRoundRect(0, 0, width - 1, height - 1, arcs.width, arcs.height);// paint border
+																													}
+																												};
+																												txtTelefono.setBounds(842, 167, 184, 29);
+																												panelFormulario.add(txtTelefono);
+																												txtTelefono.setFont(new Font("Tahoma", Font.PLAIN, 15));
+																												txtTelefono.setBorder(null);
+																												txtTelefono.setOpaque(false);
+																												txtTelefono.setColumns(10);
+																												
+																														txtLocalidad = new JTextField() {
+																															@Override
+																															protected void paintComponent(Graphics g) {
+																																super.paintComponent(g);
+																																Dimension arcs = new Dimension(25, 25); // Border corners arcs {width,height}, change this to whatever
+																																										// you want
+																																int width = getWidth();
+																																int height = getHeight();
+																																Graphics2D graphics = (Graphics2D) g;
+																																graphics.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+																												
+																																// Draws the rounded panel with borders.
+																																graphics.setColor(new Color(250, 128, 114, 25));
+																																graphics.fillRoundRect(0, 0, width - 1, height - 1, arcs.width, arcs.height);// paint background
+																																graphics.setColor(new Color(250, 128, 114, 25));
+																																graphics.drawRoundRect(0, 0, width - 1, height - 1, arcs.width, arcs.height);// paint border
+																															}
+																														};
+																														txtLocalidad.setBounds(842, 267, 184, 29);
+																														panelFormulario.add(txtLocalidad);
+																														txtLocalidad.setFont(new Font("Tahoma", Font.PLAIN, 15));
+																														txtLocalidad.setBorder(null);
+																														txtLocalidad.setOpaque(false);
+																														txtLocalidad.setColumns(10);
+																														txtLocalidad.setColumns(10);
+																														
+																																txtNconvenio = new JTextField() {
+																																	@Override
+																																	protected void paintComponent(Graphics g) {
+																																		super.paintComponent(g);
+																																		Dimension arcs = new Dimension(25, 25); // Border corners arcs {width,height}, change this to whatever
+																																												// you want
+																																		int width = getWidth();
+																																		int height = getHeight();
+																																		Graphics2D graphics = (Graphics2D) g;
+																																		graphics.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+																														
+																																		// Draws the rounded panel with borders.
+																																		graphics.setColor(new Color(250, 128, 114, 25));
+																																		graphics.fillRoundRect(0, 0, width - 1, height - 1, arcs.width, arcs.height);// paint background
+																																		graphics.setColor(new Color(250, 128, 114, 25));
+																																		graphics.drawRoundRect(0, 0, width - 1, height - 1, arcs.width, arcs.height);// paint border
+																																	}
+																																};
+																																txtNconvenio.setBounds(487, 269, 184, 29);
+																																panelFormulario.add(txtNconvenio);
+																																txtNconvenio.setBackground(Color.WHITE);
+																																txtNconvenio.setFont(new Font("Tahoma", Font.PLAIN, 15));
+																																txtNconvenio.setBorder(null);
+																																txtNconvenio.setOpaque(false);
+																																txtNconvenio.setColumns(10);
 		
 		btnCancelar = new JButton("Cancelar");
 		btnCancelar.setBounds(54, 652, 117, 29);
